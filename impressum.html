@@ -24,6 +24,33 @@
 </header>
 
 <main style="max-width: 800px; margin: 60px auto; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+    <section style="margin-bottom: 50px;">
+        <h2>Kontaktieren Sie uns</h2>
+        <p>Haben Sie Fragen zu Ihrer Lizenz oder benötigen Sie technischen Support?</p>
+
+        <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <input type="text" placeholder="Ihr Name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                <input type="email" placeholder="Ihre E-Mail Adresse" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            <select style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: white;">
+                <option>Allgemeine Anfrage</option>
+                <option>Support-Anfrage</option>
+                <option>Lizenz-Frage</option>
+                <option>Feedback</option>
+            </select>
+            <textarea rows="5" placeholder="Ihre Nachricht..." required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"></textarea>
+
+            <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #666;">
+                <input type="checkbox" id="privacy" required style="margin-top: 4px;">
+                <label for="privacy">Ich habe die <a href="privacy.html" style="color: var(--primary-orange);">Datenschutzerklärung</a> gelesen und akzeptiere die Verarbeitung meiner Daten.</label>
+            </div>
+
+            <button type="submit" class="btn-main-buy" style="width: fit-content; padding: 12px 30px;">Nachricht senden</button>
+        </form>
+    </section>
+
+    <hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
     <h1>Impressum</h1>
 
     <p><strong>Firmawortlaut:</strong> Focus Software e.U.</p>
@@ -49,25 +76,25 @@
 
     <p>
         <strong>Anwendbare Rechtsvorschriften:</strong> <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" style="color: var(--primary-orange);">Gewerbeordnung</a><br>
-       <!-- <strong>Anwendbare Rechtsvorschriften:</strong> Gewerbeordnung (GewO)<br> -->
         <strong>Zugang:</strong> <a href="https://www.ris.bka.gv.at" target="_blank" style="color: var(--primary-orange);">www.ris.bka.gv.at</a>
     </p>
 
     <p><strong>Aufsichtsbehörde/Gewerbebehörde:</strong> Magistratisches Bezirksamt des 22. Bezirkes</p>
 
-    <p><strong>Berufsbezeichnung:</strong> Softwareentwickler, Meisterprüfung abgelegt in Österreich</p>
+    <p><strong>Berufsbezeichnung:</strong> IT-Dienstleister</p>
 
     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-
-    <!-- <p><strong>Blattlinie:</strong> Unser Anliegen ist die Information über Software zur Produktivitätssteigerung sowie die Förderung des Absatzes derselben.</p>
-    -->
+    <h2>Offenlegung gemäß § 24 Mediengesetz</h2>
+    <p><strong>Medieninhaber:</strong> Focus Software e.U.</p>
+    <p><strong>Unternehmensgegenstand:</strong> Entwicklung, Vertrieb und Support von Produktivitätssoftware zur Förderung des Zeitmanagements.</p>
+    <p><strong>Grundlegende Richtung (Blattlinie):</strong> Die Website dient dem Vertrieb und der Präsentation der Software "FocusTime" sowie der Bereitstellung von Informationen zur Steigerung der Arbeitseffizienz (Pomodoro-Technik).</p>
 </main>
 
 <footer>
     <p>&copy; 2026 FocusTime - <a href="index.html">Shop</a> | <a href="about.html">Marke</a></p>
     <p>
         <a href="impressum.html">Impressum</a> |
-        <a href="datenschutz.html">Datenschutz</a> |
+        <a href="privacy.html">Datenschutz</a> |
         <a href="lizenz.html">Lizenz</a>
     </p>
 </footer>

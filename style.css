@@ -59,21 +59,75 @@ h1 { font-size: 3rem; margin: 10px 0; line-height: 1.2; }
 .usp-list { list-style: none; padding: 0; }
 .usp-list li::before { content: "• "; color: var(--text-dark); font-weight: bold; }
 
-/* TIMER MOCKUP (Rechte Seite) */
+/* TIMER MOCKUP BOX */
 .timer-mockup {
     background: white;
-    padding: 40px;
-    border-radius: 40px;
-    border: 12px solid var(--primary-orange);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 30px;
+    border: 15px solid #ff7043; /* Der dicke orange Rand */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     text-align: center;
-    min-width: 250px;
+    width: 350px; /* Feste Breite damit er nicht zusammengedrückt wird */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.timer-display { font-size: 3rem; font-weight: bold; margin: 10px 0; }
-.stat-item { margin: 15px 0; }
-.stat-value { font-weight: bold; display: block; font-size: 1.2rem; }
-.stat-label { color: var(--text-gray); font-size: 0.8rem; }
+.tomato-icon { font-size: 3rem; margin-bottom: 5px; }
+
+.timer-display {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.timer-status {
+    color: var(--text-gray);
+    font-size: 1rem;
+    margin: 10px 0 25px 0;
+}
+
+/* FORTSCHRITTSBALKEN */
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #eee;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Damit der Fill nicht übersteht */
+}
+
+.progress-fill {
+    width: 65%; /* Fortschritt wie im Bild */
+    height: 100%;
+    background: #f44336;
+}
+
+/* STATISTIKEN NEBENEINANDER (Flex-Row statt Column) */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.stat-item {
+    flex: 1; /* Alle Items gleich breit */
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-size: 0.8rem;
+}
 
 /* FOOTER */
 footer { background: #f4f4f4; padding: 40px; text-align: center; margin-top: 50px; }

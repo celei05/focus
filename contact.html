@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Impressum - FocusTime</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        .impressum-box {
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        h2 { color: var(--primary-orange); margin-bottom: 20px; }
+        .legal-link { color: var(--primary-orange); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">🍅 FocusTime</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lizenz.html">Lizenzen</a></li>
+            <li><a href="barriere.html">Barrierefreiheit</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="contact-grid">
+        <section class="contact-form">
+            <h2>Schreiben Sie uns</h2>
+            <p>Haben Sie Fragen zur Lizenzierung oder Technik? Unser Team hilft Ihnen gerne weiter.</p>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" placeholder="ihre@mail.at" required>
+
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="5" placeholder="Wie können wir helfen?" required></textarea>
+
+                <button type="submit" class="btn-main-buy" style="width: 100%;">Nachricht senden</button>
+            </form>
+        </section>
+
+        <section class="impressum-box">
+            <h2>Impressum</h2>
+            <p><strong>FocusTime e.U.</strong><br>
+                Inhaber: [Dein Name]<br>
+                Softwareentwicklung & IT-Dienstleistungen</p>
+
+            <p>Musterstraße 123, 1010 Wien, Österreich</p>
+
+            <p><strong>Kontakt:</strong><br>
+                Tel: +43 1 234 567 89<br>
+                E-Mail: <a href="mailto:office@focustime.at" class="legal-link">office@focustime.at</a></p>
+
+            <p><strong>Registerdaten:</strong><br>
+                Firmenbuchnummer: FN 123456 x<br>
+                Firmenbuchgericht: Handelsgericht Wien<br>
+                UID-Nummer: ATU12345678</p>
+
+            <p><strong>Gewerbe- & Berufsrecht:</strong><br>
+                Aufsichtsbehörde: Magistratisches Bezirksamt des I. Bezirkes<br>
+                Mitglied der Wirtschaftskammer Wien (Fachgruppe UBIT)<br>
+                Anwendbare Rechtsvorschriften: Gewerbeordnung (<a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" class="legal-link">www.ris.bka.gv.at</a>)</p>
+
+            <p><strong>Offenlegung gemäß § 24 Mediengesetz:</strong><br>
+                Medieninhaber: FocusTime e.U., Wien<br>
+                Unternehmensgegenstand: Entwicklung und Vertrieb von Produktivitätssoftware.<br>
+                Blattlinie: Informationen zur Steigerung der Arbeitseffizienz mittels Pomodoro-Technik.</p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 FocusTime - <a href="privacy.html">Datenschutz</a> | <a href="lizenz.html">Lizenzen</a></p>
+</footer>
+
+</body>
+</html>
