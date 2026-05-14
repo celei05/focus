@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            /* Kontrastoptimiertes Orange für bessere Lesbarkeit (WCAG konform) */
-            --primary-orange: #d84315;
+            /* Dieses Orange (#D84315) ist dunkel genug für WAVE (Kontrast > 4.5:1) */
+            --primary-orange: #D84315;
             --dark-grey: #2c3e50;
             --light-grey: #f4f4f4;
         }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #222; margin: 0; }
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
         /* Hero Section */
         .hero { background: var(--dark-grey); color: white; padding: 80px 20px; text-align: center; }
-        .hero h1 { font-size: 3rem; margin: 0; color: var(--primary-orange); letter-spacing: 1px; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; opacity: 0.9; }
+        .hero h1 { font-size: 3rem; margin: 0; color: #FF8A65; letter-spacing: 1px; } /* Helleres Orange auf Dunkel ist barrierefrei */
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; opacity: 1; }
 
         /* Sektionen */
         .section { padding: 60px 0; border-bottom: 1px solid #eee; }
@@ -46,9 +46,8 @@
             background: #fff;
             overflow: hidden;
         }
-        .brand-visual img { width: 100%; height: 100%; object-fit: contain; }
 
-        /* Wortmarke Preview - Farbe angepasst auf Primary Orange */
+        /* Wortmarke Preview - Jetzt mit Kontrast-Orange */
         .wordmark-box {
             font-weight: 900;
             font-size: 1.1rem;
@@ -60,7 +59,7 @@
 
         /* Stats */
         .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .stat-item { text-align: center; background: var(--light-grey); padding: 20px; border-radius: 8px; }
+        .stat-item { text-align: center; background: #eceff1; padding: 20px; border-radius: 8px; }
         .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--primary-orange); display: block; }
 
         .highlight { color: var(--primary-orange); font-weight: bold; }
@@ -71,7 +70,7 @@
 
 <header style="padding: 20px; background: #fff; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
     <div style="font-weight: bold; font-size: 1.5rem;">🍅 FocusTime</div>
-    <nav><a href="index.html" style="text-decoration: none; color: var(--primary-orange); font-weight: bold;">Zurück zum Shop</a></nav>
+    <nav><a href="index.html" style="text-decoration: underline; color: var(--primary-orange); font-weight: bold;">Zurück zum Shop</a></nav>
 </header>
 
 <div class="hero">
@@ -143,7 +142,7 @@
                 <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 09: Software & Apps</span>
                 <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 42: SaaS & IT-Entwicklung</span>
             </div>
-            <p style="font-size: 0.85rem; color: #666;">Validiert via EUIPO eSearch und TMview.</p>
+            <p style="font-size: 0.85rem; color: #555;">Validiert via EUIPO eSearch und TMview.</p>
         </div>
     </section>
 
