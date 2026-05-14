@@ -3,70 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns & Marke - FocusTime</title>
+    <title>Über uns - FocusTime Identity</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .brand-section { max-width: 900px; margin: 40px auto; padding: 20px; }
-        .brand-card {
-            display: flex; gap: 20px; background: #fff; border: 1px solid #eee;
-            padding: 20px; border-radius: 15px; margin-bottom: 30px; align-items: center;
+        :root { --primary-orange: #ff5722; --dark-grey: #2c3e50; --light-grey: #f4f4f4; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Hero Section */
+        .hero { background: var(--dark-grey); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin: 0; color: var(--primary-orange); letter-spacing: 1px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; opacity: 0.9; }
+
+        /* Sektionen */
+        .section { padding: 60px 0; border-bottom: 1px solid #eee; }
+        .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        h2 { color: var(--dark-grey); font-size: 2rem; margin-bottom: 25px; }
+
+        /* Marken-Visualisierung (Exakte Ausrichtung) */
+        .brand-display { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
+        .brand-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 30px;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
         }
-        .brand-icon { font-size: 3rem; min-width: 80px; text-align: center; }
-        .nizza-box { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px; }
-        .highlight { color: #ff5722; font-weight: bold; }
+        .brand-visual {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            overflow: hidden;
+        }
+        .brand-visual img { width: 100%; height: 100%; object-fit: contain; }
+
+        /* Wortmarke Preview */
+        .wordmark-box { font-weight: 900; font-size: 1.1rem; border: 3px solid var(--dark-grey); padding: 8px; text-transform: uppercase; }
+
+        /* Stats (Siemens Style) */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-item { text-align: center; background: var(--light-grey); padding: 20px; border-radius: 8px; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--primary-orange); display: block; }
+
+        .highlight { color: var(--primary-orange); font-weight: bold; }
+        footer { text-align: center; padding: 40px; background: #eee; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-area">🍅 FocusTime</div>
-    <nav><ul><li><a href="index.html">Home</a></li><li><a href="lizenz.html">Lizenzen</a></li></ul></nav>
+<header style="padding: 20px; background: #fff; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+    <div style="font-weight: bold; font-size: 1.5rem;">🍅 FocusTime</div>
+    <nav><a href="index.html" style="text-decoration: none; color: var(--primary-orange); font-weight: bold;">Zurück zum Shop</a></nav>
 </header>
 
-<main class="brand-section">
-    <h1>Markenstrategie & Identität</h1>
-    <p>Um die Einzigartigkeit von FocusTime zu schützen, haben wir drei verschiedene Markenformen definiert und zur Anmeldung vorbereitet.</p>
+<div class="hero">
+    <h1>Transforming Focus</h1>
+    <p>Unsere Technologie beschleunigt die persönliche Transformation durch industrialisierte Effizienz und psychologische Exzellenz.</p>
+</div>
 
-    <div class="brand-card">
-        <div class="brand-icon">🍅</div>
-        <div>
-            <h3>1. Wort-Bildmarke: "FocusTime Logo"</h3>
-            <p>Diese Marke kombiniert den Namen in der Schriftart 'Inter' mit unserem Icon. Die <span class="highlight">Farbwahl</span> (Signal-Orange) steht für Energie und Aufmerksamkeit, während die <span class="highlight">Formwahl</span> der runden Tomate eine Brücke zur bewährten Pomodoro-Technik schlägt.</p>
+<div class="container">
+
+    <section class="section">
+        <div class="section-grid">
+            <div>
+                <h2>Unsere Mission</h2>
+                <p>Wir schaffen Technologie, um den Alltag für alle produktiver zu machen. Das ist unser Purpose. Unsere Strategie ist es, durch digitale Transformation und Automatisierung Momente der Ablenkung in außerordentliche Möglichkeiten zu verwandeln.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">25 Min.</span>
+                    <p>Optimierte Fokus-Intervalle</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <p>DSGVO-konforme Datensouveränität</p>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="brand-card">
-        <div class="brand-icon">📦</div>
-        <div>
-            <h3>2. Formmarke (3D-Marke)</h3>
-            <p>Wir schützen die spezifische Geometrie unseres physischen Fokus-Cubes. Die <span class="highlight">Positionswahl</span> der Bedienelemente auf der Oberseite ist ein wesentliches Herkunftsmerkmal unseres Designs.</p>
-        </div>
-    </div>
-
-    <div class="brand-card">
-        <div style="width: 80px; height: 80px; background: #ff5722; border-radius: 10px;"></div>
-        <div>
-            <h3>3. Farbartmarke: "Focus-Orange"</h3>
-            <p>Ein spezifischer Orange-Ton (Pantone 172 C), der im Bereich der Produktivitäts-Software eine hohe Unterscheidungskraft besitzt und unsere Marke ohne Worte identifizierbar macht.</p>
-        </div>
-    </div>
-
-    <section class="nizza-box">
-        <h2>Nizza-Klassifizierung</h2>
-        <p>Unsere Marken wurden für folgende Klassen gemäß dem Abkommen von Nizza angemeldet:</p>
-        <ul>
-            <li><strong>Klasse 09:</strong> Herunterladbare Software zur Zeitmessung und Aufgabenverwaltung; Mobile Apps.</li>
-            <li><strong>Klasse 42:</strong> Software as a Service (SaaS); Bereitstellung von Online-Produktivitätswerkzeugen.</li>
-        </ul>
     </section>
 
-    <section style="margin-top: 30px; font-size: 0.9rem; color: #666; font-style: italic;">
-        <strong>Rechtlicher Hinweis:</strong> Die Marken wurden via TMview und EUIPO eSearch auf Kollisionen geprüft. Es wurden keine identischen Wortmarken im Bereich Software (Klasse 09) gefunden, die eine Verwechslungsgefahr begründen könnten.
+    <section class="section">
+        <h2>Identity & Governance</h2>
+        <p>Ein weltweit agierendes Start-up erfordert eine unmissverständliche Identität. Wir sichern unsere Marktpräsenz durch drei rechtlich definierte Markenformen ab:</p>
+
+        <div class="brand-display">
+            <div class="brand-row">
+                <div class="brand-visual">
+                    <div class="wordmark-box">FOCUSTIME</div>
+                </div>
+                <div>
+                    <strong>1. Wortmarke: Rechtliche Integrität</strong>
+                    <p>Schutz der Zeichenfolge <span class="highlight">FOCUSTIME</span>. Dies garantiert unsere namentliche Alleinstellung im Bereich der Zeitmanagement-Software.</p>
+                </div>
+            </div>
+
+            <div class="brand-row">
+                <div class="brand-visual">
+                    <img src="time_logo.png" alt="FocusTime Bildmarke">
+                </div>
+                <div>
+                    <strong>2. Bildmarke: Visueller Anker</strong>
+                    <p>Unser Logo (time_logo.png) fungiert als universeller Herkunftsnachweis und bildet das Herzstück unserer visuellen Markenstrategie.</p>
+                </div>
+            </div>
+
+            <div class="brand-row">
+                <div class="brand-visual" style="background-color: var(--primary-orange);"></div>
+                <div>
+                    <strong>3. Farbmarke: Strategic Color</strong>
+                    <p>Die Verwendung von <span class="highlight">Focus-Orange</span> sorgt für einen hohen Wiedererkennungswert und signalisiert Energie und Handlungsbereitschaft.</p>
+                </div>
+            </div>
+        </div>
     </section>
-</main>
+
+    <section class="section">
+        <div style="background: var(--light-grey); padding: 40px; border-radius: 12px; text-align: center;">
+            <h2>Nizza-Klassifizierung</h2>
+            <p>Um Markenrechtsverletzungen auszuschließen und unsere Governance-Standards zu erfüllen, operieren wir in den Klassen:</p>
+            <div style="margin: 20px 0;">
+                <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 09: Software & Apps</span>
+                <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 42: SaaS & IT-Entwicklung</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #666;">Validiert via EUIPO eSearch und TMview.</p>
+        </div>
+    </section>
+
+</div>
 
 <footer>
-    <p>&copy; 2026 FocusTime - <a href="impressum.html">Impressum</a> | <a href="privacy.html">Datenschutz</a></p>
+    <p>&copy; 2026 Focus Software e.U. | <a href="barriere.html">Barrierefreiheit</a> | <a href="lizenz.html">Lizenzen</a></p>
 </footer>
 
 </body>
