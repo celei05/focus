@@ -45,10 +45,10 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#preise">Preise</a></li>
-            <li><a href="#bewertungen">Bewertungen</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a>Features</a></li>
+            <li><a>Preise</a></li>
+            <li><a>Bewertungen</a></li>
+            <li><a>FAQ</a></li>
         </ul>
     </nav>
     <button class="btn-header-buy">🛒 Jetzt kaufen</button>
@@ -91,15 +91,15 @@
 
                 <div class="stats">
                     <div class="stat-item">
-                        <p class="stat-value">12</p>
+                        <h4 class="stat-value">12</h4>
                         <p class="stat-label">Sessions</p>
                     </div>
                     <div class="stat-item">
-                        <p class="stat-value">6h</p>
+                        <h4 class="stat-value">6h</h4>
                         <p class="stat-label">Heute</p>
                     </div>
                     <div class="stat-item">
-                        <p class="stat-value">98%</p>
+                        <h4 class="stat-value">98%</h4>
                         <p class="stat-label">Erfolg</p>
                     </div>
                 </div>
@@ -119,22 +119,25 @@
     </section>
 
     <section style="background: white; padding: 60px 10%; text-align: center;">
-        <h2 style="color: var(--primary-orange);">Fokus durch Planung</h2>
+        <h2 id="video-heading" style="color: var(--primary-orange);">Fokus durch Planung</h2>
         <p style="margin-bottom: 30px; color: var(--text-muted);">Behalte deine Aufgaben mit FocusTime immer im Blick – egal auf welchem Gerät.</p>
 
         <div style="max-width: 800px; margin: 0 auto; position: relative;">
-            <video width="100%" autoplay muted loop playsinline style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" aria-label="Video einer Person, die produktiv Notizen auf einem Tablet schreibt">
+            <video width="100%" autoplay muted loop playsinline
+                   style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);"
+                   aria-labelledby="video-heading">
                 <source src="to_do_video.mp4" type="video/mp4">
+                <track kind="captions" src="" srclang="de" label="Deutsch">
                 Ihr Browser unterstützt das Video-Tag nicht.
             </video>
         </div>
     </section>
 
     <section style="background: #f9f9f9; padding: 60px 10%; border-radius: 15px; text-align: center; margin: 40px 10%; border: 1px solid #eee;">
-        <h2 style="color: var(--primary-orange);">Klassische Entspannung</h2>
+        <h2 id="audio-heading" style="color: var(--primary-orange);">Klassische Entspannung</h2>
         <p style="margin-bottom: 20px; color: var(--text-muted);">Nutzen Sie die beruhigenden Klänge von Erik Satie, um Ihre Konzentration zu maximieren.</p>
 
-        <audio controls style="width: 100%; max-width: 500px; margin: 20px 0;">
+        <audio controls style="width: 100%; max-width: 500px; margin: 20px 0;" aria-labelledby="audio-heading">
             <source src="gymnopedie_no_1.mp3" type="audio/mpeg">
             Ihr Browser unterstützt das Audio-Element nicht.
         </audio>
