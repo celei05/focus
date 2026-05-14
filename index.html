@@ -6,20 +6,27 @@
     <title>FocusTime - Produktivität neu gedacht</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Kontrast-Optimierungen für WAVE */
+
         :root {
             --primary-orange: #d84315; /* Dunkleres Orange für besseren Kontrast auf Weiß */
             --text-muted: #555555;    /* Dunkleres Grau für bessere Lesbarkeit */
         }
 
-        .rating-badge {
-            color: #333333; /* Dunklerer Text */
-            font-weight: 600;
-        }
 
-        .stars {
-            color: #b8860b; /* Dunkleres Gold/Gelb für Kontrast auf hellem Grund */
-        }
+    .stars {
+        color: #856404; /* Tiefes Goldbraun für besseren Kontrast auf weißem/hellem Grund */
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .rating-badge {
+        color: #212529; /* Fast Schwarz für maximalen Textkontrast */
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
 
         .hero-description {
             color: #333333; /* Maximale Lesbarkeit */
