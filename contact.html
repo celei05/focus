@@ -6,6 +6,11 @@
     <title>Kontakt & Impressum - FocusTime</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        :root {
+            --text-gray: #616161;
+            --primary-orange: #ff5722;
+            --dark-blue: #2c3e50; /* Für besseren Kontrast bei Links */
+        }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -13,6 +18,13 @@
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
+        }
+        /* Labels für Screenreader und WAVE sichtbar machen */
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -27,19 +39,33 @@
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #eee;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             line-height: 1.6;
+            color: #333;
         }
-        h2 { color: var(--primary-orange); margin-bottom: 20px; }
-        .legal-link { color: var(--primary-orange); text-decoration: none; }
+        h2 { color: var(--dark-blue); margin-bottom: 20px; }
+
+        /* Kontrastoptimierte Links (Dunkler für WAVE) */
+        .legal-link {
+            color: #d84315;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .legal-link:hover { color: #bf360c; }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-area">🍅 FocusTime</div>
+<header style="padding: 20px; background: #fff; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo-area" style="font-weight: bold; font-size: 1.4rem;">🍅 FocusTime</div>
     <nav>
-        <ul>
+        <ul style="display: flex; gap: 20px; list-style: none; margin: 0;">
             <li><a href="index.html">Home</a></li>
             <li><a href="lizenz.html">Lizenzen</a></li>
             <li><a href="barriere.html">Barrierefreiheit</a></li>
@@ -53,6 +79,7 @@
             <h2>Schreiben Sie uns</h2>
             <p>Haben Sie Fragen zur Lizenzierung oder Technik? Unser Team hilft Ihnen gerne weiter.</p>
             <form action="#">
+                <!-- Explizite Labels für WAVE Konformität -->
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Ihr Name" required>
 
@@ -62,7 +89,7 @@
                 <label for="message">Nachricht</label>
                 <textarea id="message" name="message" rows="5" placeholder="Wie können wir helfen?" required></textarea>
 
-                <button type="submit" class="btn-main-buy" style="width: 100%;">Nachricht senden</button>
+                <button type="submit" class="btn-main-buy" style="width: 100%; cursor: pointer;">Nachricht senden</button>
             </form>
         </section>
 
@@ -86,7 +113,7 @@
             <p><strong>Gewerbe- & Berufsrecht:</strong><br>
                 Aufsichtsbehörde: Magistratisches Bezirksamt des I. Bezirkes<br>
                 Mitglied der Wirtschaftskammer Wien (Fachgruppe UBIT)<br>
-                Anwendbare Rechtsvorschriften: Gewerbeordnung (<a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" class="legal-link">www.ris.bka.gv.at</a>)</p>
+                Anwendbare Rechtsvorschriften: <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" class="legal-link">Gewerbeordnung (RIS)</a></p>
 
             <p><strong>Offenlegung gemäß § 24 Mediengesetz:</strong><br>
                 Medieninhaber: FocusTime e.U., Wien<br>
@@ -96,8 +123,8 @@
     </div>
 </main>
 
-<footer>
-    <p>&copy; 2026 FocusTime - <a href="privacy.html">Datenschutz</a> | <a href="lizenz.html">Lizenzen</a></p>
+<footer style="text-align: center; padding: 40px; background: #f4f4f4; color: #444;">
+    <p>&copy; 2026 FocusTime - <a href="privacy.html" style="color: inherit;">Datenschutz</a> | <a href="lizenz.html" style="color: inherit;">Lizenzen</a></p>
 </footer>
 
 </body>
