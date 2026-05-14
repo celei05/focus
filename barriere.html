@@ -6,110 +6,131 @@
     <title>Barrierefreiheit (WCAG 2.2) - FocusTime</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .accessibility-container { max-width: 850px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; font-family: sans-serif; }
-        h2 { color: #d84315; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        .wcag-badge { background: #2e7d32; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; }
-        .feature-box { background: #fdfdfd; padding: 20px; border-radius: 12px; margin: 20px 0; border: 1px solid #e0e0e0; border-left: 6px solid #2e7d32; }
-        .status-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; }
+        :root {
+            --primary-orange: #d84315;
+            --dark-blue: #2c3e50;
+            --text-gray: #616161;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; color: #333; margin: 0; background-color: #fffdf9; }
+
+        .accessibility-container { max-width: 850px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+
+        h1 { border-bottom: 3px solid var(--primary-orange); padding-bottom: 10px; color: #333; }
+        h2 { color: var(--dark-blue); margin-top: 35px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        h3 { color: var(--dark-blue); }
+
+        .wcag-badge { background: #2e7d32; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 15px; }
+
+        .feature-box {
+            background: #fdfdfd;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+            border-left: 6px solid #2e7d32;
+        }
+
+        .contact-link {
+            color: #1a5a96;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* FOOTER DESIGN NACH SCREENSHOT */
+        footer {
+            background: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            font-size: 0.95rem;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #3f51b5; /* Blau wie im Screenshot */
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        .footer-links span {
+            color: #333;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-area">🍅 FocusTime</div>
-    <nav><ul><li><a href="index.html">Zurück zum Shop</a></li></ul></nav>
+<header style="padding: 20px; background: #fff; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo-area" style="font-weight: bold; font-size: 1.4rem;">🍅 FocusTime</div>
+    <nav>
+        <a href="index.html" style="text-decoration: none; color: var(--text-gray); font-size: 0.9rem;">← Zurück zum Shop</a>
+    </nav>
 </header>
 
 <main class="accessibility-container">
     <span class="wcag-badge">Standard: WCAG 2.2 Konformitätsstufe AA</span>
     <h1>Erklärung zur Barrierefreiheit</h1>
 
-    <p>Focus Software e.U. bemüht sich, die Websites barrierefrei zugänglich zu machen. Diese Website wurde unter Berücksichtigung der neuesten <strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong> gestaltet, um eine barrierefreie Nutzung für alle Menschen zu ermöglichen.</p>
-
-    <!-- <div class="status-tag">Status: Teilweise konform</div> -->
+    <p>Focus Software e.U. bemüht sich, die Websites barrierefrei zugänglich zu machen. Diese Website wurde unter Berücksichtigung der neuesten <strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong> gestaltet.</p>
 
     <h2>1. Nicht barrierefreie Inhalte</h2>
-    <p>Trotz unserer Bemühungen um eine vollständige Konformität nach WCAG 2.2 AA sind derzeit folgende Inhalte noch nicht vollständig barrierefrei:</p>
     <ul>
-        <li>
-            <strong>Video (Keine Audiodeskription):</strong>
-            Unser Video zeigt eine Person, die Notizen auf einem Tablet schreibt. Da dieses Video rein visuell ist und keine Tonspur enthält, fehlt derzeit eine Audiodeskription oder eine ausführliche Textalternative, die den visuellen Handlungsablauf für blinde Nutzer beschreibt (WCAG 1.2.5).
-        </li>
-        <li>
-            <strong>Audio (Musik-Player):</strong>
-            Die eingebundene Klaviermusik dient der Fokus-Unterstützung. Eine textliche Transkription der Melodie ist nicht vorhanden, da es sich um rein instrumentale Inhalte ohne Sprachinformationen handelt.
-        </li>
-        <li>
-            <strong>Grafische Kontraste:</strong>
-            Einige feine Linien in den Logos oder dekorativen Grafiken (z. B. das Tomaten-Icon) erreichen in bestimmten Browser-Skalierungen noch nicht die strengen Kontrastwerte für nicht-textliche Kontraste (nicht erfüllt: WCAG 1.4.11).
-        </li>
+        <li><strong>Video (Keine Audiodeskription):</strong> Das Video ist rein visuell und dient der Dekoration.</li>
+        <li><strong>Audio (Musik-Player):</strong> Rein instrumentale Fokus-Musik ohne Textinformation.</li>
+        <li><strong>Grafische Kontraste:</strong> Dekorative Icons erreichen teilweise noch nicht die vollen Kontrastwerte in allen Skalierungen.</li>
     </ul>
 
-    <h2>2. Stand der Vereinbarkeit</h2>
-    <p>Die Inhalte dieser Website sind teilweise mit den Anforderungen der WCAG 2.2 AA vereinbar. Wir arbeiten kontinuierlich daran, verbleibende Barrieren abzubauen.</p>
-
-    <h2>3. Highlights der WCAG 2.2 Umsetzung</h2>
-    <p>Besonderes Augenmerk wurde auf die neuen Erfolgskriterien der Version 2.2 gelegt:</p>
-
+    <h2>2. Highlights der WCAG 2.2 Umsetzung</h2>
     <div class="feature-box">
-        <strong>Sichtbarer Fokus (Focus Appearance - 2.4.11):</strong><br>
-        Wir garantieren, dass der Tastatur-Fokusindikator jederzeit deutlich sichtbar ist. Er verfügt über einen hohen Kontrast zum Hintergrund und eine ausreichende Fläche, damit Nutzer ohne Maus präzise navigieren können.
+        <strong>Sichtbarer Fokus (2.4.11):</strong> Der Tastatur-Fokusindikator ist jederzeit deutlich durch einen kontrastreichen Rahmen sichtbar.
+    </div>
+    <div class="feature-box">
+        <strong>Zielgröße (2.5.8):</strong> Alle interaktiven Elemente haben eine Mindestgröße von 24x24 Pixeln für eine fehlerfreie Bedienung.
+    </div>
+    <div class="feature-box">
+        <strong>Konsistente Hilfe (3.2.6):</strong> Kontaktmöglichkeiten befinden sich auf jeder Unterseite an der gleichen Stelle im Footer.
     </div>
 
-    <div class="feature-box">
-        <strong>Zielgröße / Klickbereiche (Target Size - 2.5.8):</strong><br>
-        Alle interaktiven Elemente (Buttons, Links, Checkboxen) haben eine Mindestgröße von 24x24 Pixeln oder ausreichend Außenabstand, um Fehler bei Bedienungen bei eingeschränkter Motorik zu vermeiden.
-    </div>
-
-    <div class="feature-box">
-        <strong>Konsistente Hilfe (Consistent Help - 3.2.6):</strong><br>
-        Kontaktmöglichkeiten und Support-Links befinden sich auf jeder Unterseite an der exakt gleichen Stelle im Footer, um die kognitive Belastung zu senken und die Auffindbarkeit zu garantieren.
-    </div>
-
-    <div class="feature-box">
-        <strong>Redundante Eingabe vermeiden (Redundant Entry - 3.3.7):</strong><br>
-        In unserem Bestellprozess werden bereits eingegebene Informationen nicht erneut abgefragt, um die Dateneingabe für Nutzer mit kognitiven Einschränkungen zu erleichtern.
-    </div>
-
-
-
-    <h2>4. Feedback & Kontakt</h2>
-    <p>Die Angebote und Services auf dieser Website werden laufend verbessert und ausgebaut. Die Bedienbarkeit und Zugänglichkeit ist uns dabei ein großes Anliegen.
-        <br>Sollten Sie auf Barrieren stoßen, die Sie an der Benutzung dieser Website behindern - Probleme, die in dieser Erklärung nicht beschrieben sind, Mängel in Bezug auf die Einhaltung der Barrierefreiheitsanforderungen - so bitten wir Sie, uns diese mitzuteilen:</p>
+    <h2>3. Feedback & Kontakt</h2>
+    <p>Sollten Sie auf Barrieren stoßen, teilen Sie uns dies bitte mit:</p>
     <p>
         <strong>Focus Software e.U.</strong><br>
         Inhaber: Ce Lei<br>
-        E-Mail: <a href="mailto:focus12419313@email.at">focusBarrierefrei@email.at</a>
-       <br> <a>Bitte beschreiben Sie das Problem und führen Sie die URL(s) der betroffenen Webseite oder Dokuments an.</a>
+        E-Mail: <a href="mailto:focusBarrierefrei@email.at" class="contact-link">focusBarrierefrei@email.at</a>
     </p>
+
     <h3>Durchsetzungsverfahren</h3>
-    <section>
-        <h2>Durchsetzungsverfahren</h2>
-        <p>
-            Wenn Sie mit den Antworten aus der oben genannten Kontaktmöglichkeit nicht zufrieden sind oder keine Rückmeldung erhalten haben,
-            können Sie eine Beschwerde einreichen.
-        </p>
-        <p>
-            Im Rahmen dieses Projekts wird darauf hingewiesen, dass für öffentliche Stellen in Österreich die
-            <strong>Österreichische Forschungsförderungsgesellschaft (FFG)</strong> als Beschwerdestelle fungiert.
-            Beschwerden werden dort auf elektronischem Weg über ein Kontaktformular entgegengenommen:
-        </p>
-        <p>
-            <a href="https://www.ffg.at/form/kontaktformular-beschwerdestelle" target="_blank">
-                Zum Kontaktformular der Beschwerdestelle (FFG)
-            </a>
-        </p>
-        <p>
-            Die Beschwerdestelle prüft, ob Mängel bei der Einhaltung der Barrierefreiheitsanforderungen vorliegen und spricht gegebenenfalls
-            Handlungsempfehlungen aus, um die festgestellten Mängel zu beseitigen.
-        </p>
-    </section>
-    <hr>
-    <p style="font-size: 0.8rem; color: #777;">Diese Erklärung wurde initial am 20.04.2026 erstellt.<br>Diese Erklärung wurde zuletzt am 14.05.2026 nach WCAG 2.2 Revision aktualisiert.</p>
+    <p>Wenn Sie mit unseren Antworten nicht zufrieden sind, können Sie eine Beschwerde bei der FFG einreichen:</p>
+    <p>
+        <a href="https://www.ffg.at/form/kontaktformular-beschwerdestelle" target="_blank" class="contact-link">
+            Zum Kontaktformular der Beschwerdestelle (FFG)
+        </a>
+    </p>
+
+    <hr style="margin-top: 40px; border: 0; border-top: 1px solid #eee;">
+    <p style="font-size: 0.8rem; color: #777;">Zuletzt am 14.05.2026 nach WCAG 2.2 Revision aktualisiert.</p>
 </main>
 
 <footer>
-    <p>&copy; 2026 FocusTime - <a href="impressum.html">Impressum</a> | <a href="privacy.html">Datenschutz</a> | <a href="lizenz.html">Lizenzen</a></p>
+    <div>© 2026 FocusTime - Alle Rechte vorbehalten</div>
+    <div class="footer-links">
+        <a href="about.html">Über uns & Marke</a> <span>|</span>
+        <a href="impressum.html">Impressum</a> <span>|</span>
+        <a href="privacy.html">Datenschutz</a> <span>|</span>
+        <a href="lizenz.html">Lizenzseite</a> <span>|</span>
+        <a href="barriere.html">Barrierefreiheit</a>
+    </div>
 </footer>
 
 </body>

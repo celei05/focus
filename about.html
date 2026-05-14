@@ -3,67 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns - FocusTime Identity</title>
+    <title>Über uns - FocusTime</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            /* Dieses Orange (#D84315) ist dunkel genug für WAVE (Kontrast > 4.5:1) */
-            --primary-orange: #D84315;
-            --dark-grey: #2c3e50;
-            --light-grey: #f4f4f4;
+            --primary-orange: #d84315;
+            --text-gray: #616161;
         }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #222; margin: 0; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .about-container { max-width: 850px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; font-family: sans-serif; }
 
-        /* Hero Section */
-        .hero { background: var(--dark-grey); color: white; padding: 80px 20px; text-align: center; }
-        .hero h1 { font-size: 3rem; margin: 0; color: #FF8A65; letter-spacing: 1px; } /* Helleres Orange auf Dunkel ist barrierefrei */
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; opacity: 1; }
+        h1 { border-bottom: 3px solid var(--primary-orange); padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 35px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
 
-        /* Sektionen */
-        .section { padding: 60px 0; border-bottom: 1px solid #eee; }
-        .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-        h2 { color: var(--dark-grey); font-size: 2rem; margin-bottom: 25px; }
-
-        /* Marken-Visualisierung */
-        .brand-display { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
-        .brand-row {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 30px;
-            align-items: center;
-            background: white;
+        .feature-box {
+            background: #fdfdfd;
             padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #eee;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+            border-left: 6px solid var(--primary-orange);
         }
-        .brand-visual {
-            width: 120px;
-            height: 120px;
+
+        .nizza-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .stats-summary {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            overflow: hidden;
+            gap: 20px;
+            margin: 20px 0;
         }
 
-        /* Wortmarke Preview - Jetzt mit Kontrast-Orange */
-        .wordmark-box {
-            font-weight: 900;
-            font-size: 1.1rem;
-            border: 3px solid var(--primary-orange);
-            color: var(--primary-orange);
-            padding: 8px;
-            text-transform: uppercase;
+        .stat-card {
+            flex: 1;
+            background: #eceff1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
         }
 
-        /* Stats */
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .stat-item { text-align: center; background: #eceff1; padding: 20px; border-radius: 8px; }
-        .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--primary-orange); display: block; }
+        .stat-val { font-size: 1.5rem; font-weight: bold; color: var(--primary-orange); display: block; }
 
-        .highlight { color: var(--primary-orange); font-weight: bold; }
-        footer { text-align: center; padding: 40px; background: #eee; font-size: 0.9rem; }
+        /* FOOTER DESIGN NACH SCREENSHOT */
+        footer {
+            background: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #3f51b5; /* Klassisches Link-Blau wie im Screenshot */
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        .footer-links span {
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -74,83 +84,57 @@
         <a href="index.html" style="text-decoration: none; color: var(--text-gray); font-size: 0.9rem;">Zurück zum Shop</a>
     </nav>
 </header>
-<div class="hero">
-    <h1>Transforming Focus</h1>
-    <p>Unsere Technologie beschleunigt die persönliche Transformation durch industrialisierte Effizienz und psychologische Exzellenz.</p>
-</div>
 
-<div class="container">
+<main class="about-container">
+    <h1>Über FocusTime</h1>
+    <p>Focus Software e.U. steht für die Verbindung von moderner Technologie und psychologischen Erkenntnissen. Unser Ziel ist es, die persönliche Produktivität durch industrialisierte Effizienz greifbar zu machen.</p>
 
-    <section class="section">
-        <div class="section-grid">
-            <div>
-                <h2>Unsere Mission</h2>
-                <p>Wir schaffen Technologie, um den Alltag für alle produktiver zu machen. Das ist unser Purpose. Unsere Strategie ist es, durch digitale Transformation und Automatisierung Momente der Ablenkung in außerordentliche Möglichkeiten zu verwandeln.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">25 Min.</span>
-                    <p>Optimierte Fokus-Intervalle</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <p>DSGVO-konforme Datensouveränität</p>
-                </div>
-            </div>
+    <div class="stats-summary">
+        <div class="stat-card">
+            <span class="stat-val">25 Min.</span>
+            Optimierte Intervalle
         </div>
-    </section>
-
-    <section class="section">
-        <h2>Identity & Governance</h2>
-        <p>Ein weltweit agierendes Start-up erfordert eine unmissverständliche Identität. Wir sichern unsere Marktpräsenz durch drei rechtlich definierte Markenformen ab:</p>
-
-        <div class="brand-display">
-            <div class="brand-row">
-                <div class="brand-visual">
-                    <div class="wordmark-box">FOCUSTIME</div>
-                </div>
-                <div>
-                    <strong>1. Wortmarke: Rechtliche Integrität</strong>
-                    <p>Schutz der Zeichenfolge <span class="highlight">FOCUSTIME</span>. Dies garantiert unsere namentliche Alleinstellung im Bereich der Zeitmanagement-Software.</p>
-                </div>
-            </div>
-
-            <div class="brand-row">
-                <div class="brand-visual">
-                    <img src="time_logo.png" alt="FocusTime Bildmarke">
-                </div>
-                <div>
-                    <strong>2. Bildmarke: Visueller Anker</strong>
-                    <p>Unser Logo (time_logo.png) fungiert als universeller Herkunftsnachweis und bildet das Herzstück unserer visuellen Markenstrategie.</p>
-                </div>
-            </div>
-
-            <div class="brand-row">
-                <div class="brand-visual" style="background-color: var(--primary-orange);"></div>
-                <div>
-                    <strong>3. Farbmarke: Strategic Color</strong>
-                    <p>Die Verwendung von <span class="highlight">Focus-Orange</span> sorgt für einen hohen Wiedererkennungswert und signalisiert Energie und Handlungsbereitschaft.</p>
-                </div>
-            </div>
+        <div class="stat-card">
+            <span class="stat-val">100%</span>
+            Datensouveränität
         </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <div style="background: var(--light-grey); padding: 40px; border-radius: 12px; text-align: center;">
-            <h2>Nizza-Klassifizierung</h2>
-            <p>Um Markenrechtsverletzungen auszuschließen und unsere Governance-Standards zu erfüllen, operieren wir in den Klassen:</p>
-            <div style="margin: 20px 0;">
-                <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 09: Software & Apps</span>
-                <span style="display: inline-block; padding: 10px 20px; background: var(--dark-grey); color: white; border-radius: 30px; margin: 5px;">Klasse 42: SaaS & IT-Entwicklung</span>
-            </div>
-            <p style="font-size: 0.85rem; color: #555;">Validiert via EUIPO eSearch und TMview.</p>
-        </div>
-    </section>
+    <h2>Unsere Mission</h2>
+    <p>Wir schaffen Lösungen, um den digitalen Alltag produktiver zu gestalten. Unsere Strategie basiert auf digitaler Transformation und der Automatisierung von Prozessen.</p>
 
-</div>
+    <h2>Identity & Brand Governance</h2>
+    <div class="feature-box">
+        <strong>1. Wortmarke:</strong><br>
+        Schutz der Zeichenfolge <strong>FOCUSTIME</strong>.
+    </div>
+
+    <div class="feature-box">
+        <strong>2. Bildmarke:</strong><br>
+        Unser Logo als universeller Herkunftsnachweis.
+    </div>
+
+    <div class="feature-box">
+        <strong>3. Farbmarke:</strong><br>
+        Das gezielte "Focus-Orange" für hohen Wiedererkennungswert.
+    </div>
+
+    <h2>Rechtliche Klassifizierung</h2>
+    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+        <span class="nizza-badge">Klasse 09: Software & Apps</span>
+        <span class="nizza-badge">Klasse 42: SaaS & IT-Entwicklung</span>
+    </div>
+</main>
 
 <footer>
-    <p>&copy; 2026 Focus Software e.U. | <a href="barriere.html">Barrierefreiheit</a> | <a href="lizenz.html">Lizenzen</a></p>
+    <div>© 2026 FocusTime - Alle Rechte vorbehalten</div>
+    <div class="footer-links">
+        <a href="about.html">Über uns & Marke</a> <span>|</span>
+        <a href="impressum.html">Impressum</a> <span>|</span>
+        <a href="privacy.html">Datenschutz</a> <span>|</span>
+        <a href="lizenz.html">Lizenzseite</a> <span>|</span>
+        <a href="barriere.html">Barrierefreiheit</a>
+    </div>
 </footer>
 
 </body>
