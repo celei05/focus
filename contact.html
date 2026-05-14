@@ -9,7 +9,7 @@
         :root {
             --text-gray: #616161;
             --primary-orange: #ff5722;
-            --dark-blue: #2c3e50; /* Für besseren Kontrast bei Links */
+            --dark-blue: #2c3e50; /* Hoher Kontrast für Barrierefreiheit */
         }
         .contact-grid {
             display: grid;
@@ -19,21 +19,25 @@
             margin: 40px auto;
             padding: 20px;
         }
-        /* Labels für Screenreader und WAVE sichtbar machen */
+
+        /* Styling für die Labels (WAVE-Anforderung) */
         .contact-form label {
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
             color: #333;
+            font-size: 0.9rem;
         }
+
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 8px;
             font-family: inherit;
         }
+
         .impressum-box {
             background: #fdfdfd;
             padding: 30px;
@@ -43,15 +47,16 @@
             line-height: 1.6;
             color: #333;
         }
+
         h2 { color: var(--dark-blue); margin-bottom: 20px; }
 
-        /* Kontrastoptimierte Links (Dunkler für WAVE) */
+        /* Kontrastreiche Links für Impressum (WAVE konform) */
         .legal-link {
-            color: #d84315;
+            color: var(--dark-blue);
             text-decoration: underline;
-            font-weight: 500;
+            font-weight: 600;
         }
-        .legal-link:hover { color: #bf360c; }
+        .legal-link:hover { color: #000; }
 
         header nav a {
             text-decoration: none;
@@ -78,32 +83,32 @@
         <section class="contact-form">
             <h2>Schreiben Sie uns</h2>
             <p>Haben Sie Fragen zur Lizenzierung oder Technik? Unser Team hilft Ihnen gerne weiter.</p>
+
             <form action="#">
-                <!-- Explizite Labels für WAVE Konformität -->
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+                <label for="name">Ihr vollständiger Name</label>
+                <input type="text" id="name" name="name" placeholder="z.B. Max Mustermann" required>
 
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" placeholder="ihre@mail.at" required>
+                <label for="email">Ihre E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="max@beispiel.at" required>
 
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" rows="5" placeholder="Wie können wir helfen?" required></textarea>
+                <label for="message">Ihre Nachricht an uns</label>
+                <textarea id="message" name="message" rows="5" placeholder="Wie können wir Ihnen helfen?" required></textarea>
 
-                <button type="submit" class="btn-main-buy" style="width: 100%; cursor: pointer;">Nachricht senden</button>
+                <button type="submit" class="btn-main-buy" style="width: 100%; cursor: pointer; background: var(--dark-blue); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold;">Nachricht senden</button>
             </form>
         </section>
 
         <section class="impressum-box">
             <h2>Impressum</h2>
             <p><strong>FocusTime e.U.</strong><br>
-                Inhaber: [Dein Name]<br>
+                Inhaber: Ce Lei<br>
                 Softwareentwicklung & IT-Dienstleistungen</p>
 
             <p>Musterstraße 123, 1010 Wien, Österreich</p>
 
             <p><strong>Kontakt:</strong><br>
                 Tel: +43 1 234 567 89<br>
-                E-Mail: <a href="mailto:office@focustime.at" class="legal-link">office@focustime.at</a></p>
+                E-Mail: <a href="mailto:focus12419313@email.at" class="legal-link">focus12419313@email.at</a></p>
 
             <p><strong>Registerdaten:</strong><br>
                 Firmenbuchnummer: FN 123456 x<br>
@@ -113,7 +118,8 @@
             <p><strong>Gewerbe- & Berufsrecht:</strong><br>
                 Aufsichtsbehörde: Magistratisches Bezirksamt des I. Bezirkes<br>
                 Mitglied der Wirtschaftskammer Wien (Fachgruppe UBIT)<br>
-                Anwendbare Rechtsvorschriften: <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" class="legal-link">Gewerbeordnung (RIS)</a></p>
+                Anwendbare Rechtsvorschriften: <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517" target="_blank" class="legal-link">Gewerbeordnung</a><br>
+                Zugang: <a href="https://www.ris.bka.gv.at" target="_blank" class="legal-link">www.ris.bka.gv.at</a></p>
 
             <p><strong>Offenlegung gemäß § 24 Mediengesetz:</strong><br>
                 Medieninhaber: FocusTime e.U., Wien<br>
