@@ -7,70 +7,62 @@
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --primary-orange: #d84315; /* Barrierefreies Orange */
+            --primary-orange: #d84315;
             --dark-blue: #2c3e50;
             --text-gray: #616161;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; color: #333; margin: 0; background-color: #fffdf9; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; margin: 0; background-color: #fffdf9; line-height: 1.7; }
 
-        .privacy-container { max-width: 850px; margin: 40px auto; padding: 20px; line-height: 1.7; }
+        .privacy-container { max-width: 850px; margin: 40px auto; padding: 20px; }
 
-        h1 { border-bottom: 3px solid var(--primary-orange); padding-bottom: 10px; color: #333; }
-        h2 { color: var(--dark-blue); margin-top: 35px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-        h3 { font-size: 1.1rem; margin-top: 20px; color: #444; }
+        h1 { border-bottom: 3px solid var(--primary-orange); padding-bottom: 10px; color: #333; font-size: 2rem; }
+        h2 { color: var(--dark-blue); margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 1.5rem; }
+        h3 { font-size: 1.2rem; margin-top: 25px; color: #444; }
 
         .law-box {
             background: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin: 15px 0;
-            border: 1px solid #eee;
             border-left: 6px solid var(--primary-orange);
+        }
+
+        .feature-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
         }
 
         .contact-card {
             background: #eceff1;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             margin-top: 20px;
             border: 1px solid #dfe6e9;
         }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        ul { padding-left: 25px; }
+        li { margin-bottom: 10px; }
 
-        /* FOOTER DESIGN NACH SCREENSHOT */
         footer {
             background: #f4f4f4;
             padding: 40px;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 60px;
             color: #333;
             font-size: 0.95rem;
             border-top: 1px solid #eee;
         }
 
-        .footer-links {
-            margin-top: 10px;
-        }
+        .footer-links { margin-top: 10px; }
+        .footer-links a { color: #3f51b5; text-decoration: underline; margin: 0 5px; }
+        .footer-links span { color: #333; }
 
-        .footer-links a {
-            color: #3f51b5; /* Blau wie im Screenshot */
-            text-decoration: underline;
-            margin: 0 5px;
-        }
-
-        .footer-links span {
-            color: #333;
-        }
-
-        header nav a {
-            text-decoration: none;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
+        header nav a { text-decoration: none; color: var(--text-gray); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -78,42 +70,79 @@
 <header style="padding: 20px; background: #fff; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
     <div style="font-weight: bold; font-size: 1.4rem;">🍅 FocusTime</div>
     <nav>
-        <a href="index.html" style="text-decoration: none; color: var(--text-gray); font-size: 0.9rem;">← Zurück zum Shop</a>
+        <a href="index.html">← Zurück zum Shop</a>
     </nav>
 </header>
 
 <main class="privacy-container">
     <h1>Datenschutzerklärung</h1>
-    <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2021).</p>
+    <p>Der Schutz Ihrer Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2021). In diesen Datenschutzinformationen informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.</p>
+
+    <div class="law-box">
+        Beim Besuch unserer Website wird Ihre IP-Adresse, Beginn und Ende der Sitzung für die Dauer dieser Sitzung erfasst. Dies ist aus technischen Gründen erforderlich und stellt damit ein berechtigtes Interesse i.S.v. Art 6 Abs 1 lit f DSGVO dar.
+    </div>
 
     <h2>1. Kontakt mit uns</h2>
-    <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre Daten zwecks Bearbeitung der Anfrage für sechs Monate gespeichert.</p>
-    <div class="law-box"><strong>Rechtsgrundlage:</strong> Erfüllung vorvertraglicher Pflichten bzw. berechtigtes Interesse (Art. 6 Abs. 1 lit. b & f DSGVO).</div>
+    <p>Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen sechs Monate bei uns gespeichert. Dies ist ein berechtigtes Interesse i.S.d. DSGVO. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
 
     <h2>2. Datenspeicherung im Webshop</h2>
-    <p>Zum Zweck der Vertragsabwicklung werden folgende Daten bei uns gespeichert:</p>
+    <p>Wir weisen darauf hin, dass zum Zweck eines funktionierenden Einkaufsvorganges und zur späteren Vertragsabwicklung vom Webshop-Betreiber im Rahmen von Cookies die IP-Daten des Anschlussinhabers gespeichert werden, ebenso wie Name und Anschrift des Käufers.</p>
+
+    <p>Darüber hinaus werden zum Zweck der Vertragsabwicklung folgende Daten bei uns gespeichert:</p>
     <ul>
         <li>Name und Anschrift</li>
-        <li>E-Mail-Adresse</li>
-        <li>Zahlungsinformationen (verschlüsselt)</li>
+        <li>E-Mail-Adresse (für den Lizenzversand)</li>
+        <li>Zahlungsdaten (Kreditkarteninformationen)</li>
     </ul>
-    <p>Die Datenübermittlung an Dritte erfolgt nur an das abwickelnde Bankinstitut (Zahlung) sowie an unseren Steuerberater (gesetzliche Verpflichtung).</p>
-    <div class="law-box"><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</div>
 
-    <h2>3. Cookies & Analyse</h2>
-    <p>Unsere Website verwendet Cookies, um das Angebot nutzerfreundlich zu gestalten. Bei der Deaktivierung von Cookies kann die Funktionalität (z.B. der Warenkorb) eingeschränkt sein.</p>
+    <p>Die von Ihnen bereitgestellten Daten sind zur Vertragserfüllung bzw. zur Durchführung vorvertraglicher Maßnahmen erforderlich. Ohne diese Daten können wir den Vertrag mit Ihnen nicht erfüllen.</p>
 
-    <h2>4. Ihre Rechte</h2>
-    <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu.</p>
-    <p>Zuständige Aufsichtsbehörde in Österreich: <strong>Datenschutzbehörde (DSB)</strong>, Barichgasse 40-42, 1030 Wien.</p>
+    <h3>Datenweitergabe</h3>
+    <p>Eine Datenübermittlung an Dritte erfolgt nicht, mit Ausnahme von:</p>
+    <ul>
+        <li>Übermittlung der Zahlungsdaten an die abwickelnden Bankinstitute/Zahlungsdienstleister zum Zwecke der Abbuchung des Einkaufspreises.</li>
+        <li>An unseren Steuerberater zur Erfüllung unserer steuerrechtlichen Verpflichtungen.</li>
+    </ul>
 
-    <h2>5. Verantwortlicher & Kontakt</h2>
+    <div class="law-box">
+        <strong>Rechtsgrundlagen:</strong> § 165 Abs 3 TKG 2021 sowie Art 6 Abs 1 lit b DSGVO (Vertragserfüllung) und Art 6 Abs 1 lit c DSGVO (Gesetzliche Verpflichtung).
+    </div>
+
+    <h2>3. Cookies</h2>
+    <p>Unsere Website verwendet Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an.</p>
+
+    <div class="feature-box" style="border-left: 6px solid var(--dark-blue);">
+        <strong>Unbedingt erforderliche Cookies (Technisch notwendig)</strong><br>
+        Wir nutzen Cookies aus technischen Gründen, um unseren Webshop funktionstüchtig anbieten zu können (z.B. Session-Cookies für den Warenkorb).
+        <br><em>Rechtsgrundlage:</em> Berechtigtes Interesse (Art 6 Abs 1 lit f DSGVO).
+    </div>
+
+    <div class="feature-box" style="border-left: 6px solid #2e7d32;">
+        <strong>Performance- & Analyse-Cookies</strong><br>
+        Bei nicht funktionsbedingt erforderlichen Cookies ersuchen wir im Cookie-Fenster um Ihre aktive Einwilligung (Art 6 Abs 1 lit a DSGVO). Diese ermöglichen es uns, die Nutzung der Website zu analysieren und das Nutzererlebnis zu verbessern.
+    </div>
+
+    <p>Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein.</p>
+
+    <h2>4. Web-Analyse</h2>
+    <p>Unsere Website verwendet Funktionen des Webanalysedienstes (z.B. Google Analytics). Dazu werden Cookies verwendet, die eine Analyse der Benutzung der Website ermöglichen. Ihre Daten werden nur dann verarbeitet, wenn Sie uns Ihre <strong>Einwilligung</strong> dazu erteilt haben.</p>
+    <div class="law-box">
+        <strong>Rechtsgrundlage:</strong> § 165 Abs 3 TKG 2021 sowie Art 6 Abs 1 lit a (Einwilligung) der DSGVO.
+    </div>
+
+    <h2>5. Ihre Rechte</h2>
+    <p>Ihnen stehen bezüglich Ihrer von uns verarbeiteten Daten grundsätzlich die Rechte auf <strong>Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch</strong> zu.</p>
+    <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei uns oder der Datenschutzbehörde beschweren. In Österreich ist dies die <strong>Österreichische Datenschutzbehörde</strong>, Barichgasse 40-42, 1030 Wien.</p>
+
+    <h2>6. Verantwortlicher & Kontakt</h2>
     <div class="contact-card">
         <strong>Focus Software e.U.</strong><br>
         Inhaber: Ce Lei<br>
         Musterstraße 1, 1010 Wien<br>
-        E-Mail: <a href="mailto:focus12419313@email.at" style="color: #1a5a96; font-weight: 600;">focus12419313@email.at</a>
+        E-Mail: <a href="mailto:focus12419313@email.at" style="color: #3f51b5; font-weight: bold;">focus12419313@email.at</a>
     </div>
+
+    <p style="font-size: 0.8rem; color: #777; margin-top: 40px;">Stand: Mai 2026<br>Erstellt auf Basis der WKO-Richtlinien für Webauftritte.</p>
 </main>
 
 <footer>

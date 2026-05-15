@@ -24,32 +24,16 @@
             border-left: 6px solid var(--primary-orange);
         }
 
-        .nizza-badge {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin: 5px;
+        .nizza-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
         }
 
-        .stats-summary {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
+        .nizza-list li {
+            padding: 5px 0;
+            font-weight: 500;
         }
-
-        .stat-card {
-            flex: 1;
-            background: #eceff1;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-val { font-size: 1.5rem; font-weight: bold; color: var(--primary-orange); display: block; }
 
         /* FOOTER DESIGN NACH SCREENSHOT */
         footer {
@@ -66,7 +50,7 @@
         }
 
         .footer-links a {
-            color: #3f51b5; /* Klassisches Link-Blau wie im Screenshot */
+            color: #3f51b5;
             text-decoration: underline;
             margin: 0 5px;
         }
@@ -89,17 +73,6 @@
     <h1>Über FocusTime</h1>
     <p>Focus Software e.U. steht für die Verbindung von moderner Technologie und psychologischen Erkenntnissen. Unser Ziel ist es, die persönliche Produktivität durch industrialisierte Effizienz greifbar zu machen.</p>
 
-    <div class="stats-summary">
-        <div class="stat-card">
-            <span class="stat-val">25 Min.</span>
-            Optimierte Intervalle
-        </div>
-        <div class="stat-card">
-            <span class="stat-val">100%</span>
-            Datensouveränität
-        </div>
-    </div>
-
     <h2>Unsere Mission</h2>
     <p>Wir schaffen Lösungen, um den digitalen Alltag produktiver zu gestalten. Unsere Strategie basiert auf digitaler Transformation und der Automatisierung von Prozessen.</p>
 
@@ -110,7 +83,7 @@
     </div>
 
     <div class="feature-box">
-        <strong>2. Bildmarke:</strong><br>
+        <strong>2. Bildmarke: 🍅</strong><br>
         Unser Logo als universeller Herkunftsnachweis.
     </div>
 
@@ -120,10 +93,11 @@
     </div>
 
     <h2>Rechtliche Klassifizierung</h2>
-    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-        <span class="nizza-badge">Klasse 09: Software & Apps</span>
-        <span class="nizza-badge">Klasse 42: SaaS & IT-Entwicklung</span>
-    </div>
+    <p>Unsere Dienstleistungen sind nach folgenden Klassen kategorisiert:</p>
+    <ul class="nizza-list">
+        <li>• Klasse 09: Software & Apps</li>
+        <li>• Klasse 42: SaaS & IT-Entwicklung</li>
+    </ul>
 </main>
 
 <footer>
