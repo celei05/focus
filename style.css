@@ -131,6 +131,67 @@ h1 { font-size: 3rem; margin: 10px 0; line-height: 1.2; }
     font-size: 0.8rem;
     color: #555;
 }
+/* Cookie Banner Styling */
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 20px;
+    z-index: 10000;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s;
+    font-family: sans-serif;
+}
 
+#cookie-banner.slide-out {
+    transform: translateX(120%); /* Schiebt den Banner nach rechts raus */
+    opacity: 0;
+}
+
+.cookie-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-orange);
+}
+
+.cookie-text {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-accept {
+    background: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    flex: 1;
+}
+
+.btn-hide {
+    background: #f0f0f0;
+    color: #444;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
 /* FOOTER */
 footer { background: #f4f4f4; padding: 40px; text-align: center; margin-top: 50px; }

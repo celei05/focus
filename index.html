@@ -41,7 +41,7 @@
 
 <header>
     <div class="logo-area">
-        <span class="logo-icon" aria-hidden="true">⚪</span> FocusTime
+        <span class="logo-icon" aria-hidden="true">🍅</span> FocusTime
     </div>
     <nav>
         <ul>
@@ -155,6 +155,30 @@
         <a href="barriere.html">Barrierefreiheit</a>
     </p>
 </footer>
+<div id="cookie-banner">
+    <div class="cookie-header">
+        <span>🍪</span> Cookie-Hinweis
+    </div>
+    <p class="cookie-text">
+        Wir nutzen Cookies, um FocusTime noch besser zu machen. Details finden Sie in unserer
+        <a href="privacy.html" style="color: var(--primary-orange);">Datenschutzerklärung</a>.
+    </p>
+    <div class="cookie-actions">
+        <button class="btn-accept" onclick="dismissBanner()">Einverstanden</button>
+        <button class="btn-hide" onclick="dismissBanner()">Schließen</button>
+    </div>
+</div>
 
+<script>
+    function dismissBanner() {
+        const banner = document.getElementById('cookie-banner');
+        banner.classList.add('slide-out');
+
+        // Optional: Nach der Animation das Element ganz entfernen
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 600);
+    }
+</script>
 </body>
 </html>
